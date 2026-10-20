@@ -1,331 +1,107 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JStonely</title>
+  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/AlienIconGreen.png">
+  <style>
+    * {
+  box-sizing: border-box;
+}
 
-    <title>JStonely</title>
-
-    <link
-        rel="icon"
-        type="image/x-icon"
-        href="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/AlienIconGreen.png"
-    >
-
-    <style>
-        /* ---------- General page setup ---------- */
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
-
-        /* ---------- Header ---------- */
-
-        header {
-            padding: 30px 5%;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            overflow-wrap: anywhere;
-        }
-
-        /* ---------- Social links and introduction ---------- */
-
-        .intro {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 30px;
-            padding: 30px 5% 50px;
-        }
-
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 18px;
-        }
-
-        .social-links h2 {
-            margin: 0;
-            font-size: clamp(1rem, 2vw, 1.5rem);
-            text-align: left;
-        }
-
-        a:link {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: #ffa300;
-        }
-
-        a:hover {
-            color: #ffec27;
-            text-decoration: underline;
-        }
-
-        a:active {
-            color: #ffffd1;
-        }
-
-        /* Intro image */
-
-        .intro-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .intro-image img {
-            display: block;
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            object-fit: contain;
-        }
-
-        /* ---------- Artwork gallery ---------- */
-
-        .gallery {
-            display: grid;
-
-            /* Three columns on larger screens */
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-
-            gap: 20px;
-            padding: 20px 5% 50px;
-        }
-
-        .gallery-item {
-            min-width: 0;
-            overflow: hidden;
-        }
-
-        .gallery-item img {
-            display: block;
-
-            /* Fill the available column width */
-            width: 100%;
-
-            /* Keep images responsive */
-            height: auto;
-
-            /* Prevent oversized images */
-            max-width: 100%;
-
-            /* Preserve the original image proportions */
-            object-fit: contain;
-
-            /* Subtle hover animation */
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.03);
-        }
-
-        /* ---------- Tablet layout ---------- */
-
-        @media (max-width: 900px) {
-            .gallery {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 16px;
+         body {
+              font-family: Arial, sans-serif;
             }
 
-            .intro {
-                padding-bottom: 30px;
-            }
-        }
+            .column {
+                      float: left;
+                      width: 50%;
+                      padding: 10px;
+                    }
 
-        /* ---------- Mobile layout ---------- */
+/* Clear floats after the columns */
+            .row:after {
+                      content: "";
+                      display: table;
+                      clear: both;
+                    }
 
-        @media (max-width: 600px) {
-            header {
-                padding: 24px 5%;
-            }
+                    h2 {
+                        text-align: right;
+                        padding-right: 90px;
+                        }
 
-            .intro {
-                grid-template-columns: 1fr;
-                gap: 25px;
-                padding: 20px 5% 35px;
-            }
 
-            .social-links {
-                align-items: center;
-                gap: 16px;
-            }
 
-            .social-links h2 {
-                text-align: center;
-                font-size: 1.15rem;
-            }
+                        a:link {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(255, 163, 0);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(255, 236, 39);
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: rgb(255, 255, 209);
+  background-color: transparent;
+  text-decoration: underline;
+}
 
-            .intro-image img {
-                max-width: 260px;
-            }
+ .third { width: 33.33%; float: left; color:rgb(255, 255, 255); padding-top: 90px}
+</style>
 
-            .gallery {
-                /* One image per row on narrow screens */
-                grid-template-columns: 1fr;
-                gap: 18px;
-                padding: 15px 5% 35px;
-            }
-        }
-
-        /* ---------- Reduced motion accessibility ---------- */
-
-        @media (prefers-reduced-motion: reduce) {
-            .gallery-item img {
-                transition: none;
-            }
-        }
-
-    </style>
 </head>
-
-<body>
-
-    <!-- Header -->
-
-    <header>
-        <h1>JacobStonely.com</h1>
-    </header>
+<body style="background-color:rgb(0, 0, 0)";>
+  <!-- Banner -->
+  <div id="banner">
+    <h1 style="color:rgb(255, 255, 255); padding: 40px;">JacobStonely.com</h1>
+  </div>
 
 
-    <!-- Social links and featured image -->
+  <div class="row">
+  <div class="column"  style="padding-top: 90px;" ;>
+    <h2 style="color:rgb(255, 255, 255)"><a href="https://www.tiktok.com/@stiffwiggins" target="_blank">Tiktok - StiffWiggins</a></h2>
+    <h2 style="color:rgb(255, 255, 255)"><a href="https://www.instagram.com/stiffwiggins" target="_blank">Instagram - StiffWiggins</a></h2>
+    <h2 style="color:rgb(255, 255, 255)"><a href="https://www.lostprop.co.uk/" target="_blank">LostProp Website</a></h2>
 
-    <section class="intro">
+  </div>
+  <div class="column" >
+  <a><img class="img" src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/AlienSighting.jpg" alt="Alien Sighting" width="300" height="300" ></a>
+   
 
-        <nav class="social-links" aria-label="Social links">
-
-            <h2>
-                <a href="https://www.tiktok.com/@stiffwiggins"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    TikTok - StiffWiggins
-                </a>
-            </h2>
-
-            <h2>
-                <a href="https://www.instagram.com/stiffwiggins"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Instagram - StiffWiggins
-                </a>
-            </h2>
-
-            <h2>
-                <a href="https://www.lostprop.co.uk/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    LostProp Website
-                </a>
-            </h2>
-
-        </nav>
-
-        <div class="intro-image">
-            <img
-                src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/AlienSighting.jpg"
-                alt="Alien Sighting artwork"
-            >
-        </div>
-
-    </section>
+  </div>
 
 
-    <!-- Artwork gallery -->
+  <div class="third"><img class="img" style="  display: block;margin: auto;" src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/AlienHeadSmoke.jpg" 
+    alt="Alien Smoker" width="500" height="500" ></div>
+  <div class="third"><img class="img" style="  display: block;margin: auto;" src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/phone%20rota.gif" 
+    alt="Phone Rotate" width="500" height="500" ></div>
+  <div class="third"><img class="img" style="  display: block;margin: auto;" src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/Gonzo.jpg"
+    alt="Gonzo" width="500" height="500" ></div>
 
-    <main class="gallery">
+  <div class="third"><img class="img" style="  display: block;margin: auto;" src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/ZomHead.jpg
+" 
+    alt="ZomHead" width="500" height="500" ></div>
+  <div class="third"><img class="img" style="  display: block;margin: auto;" src="https://github.com/JStonely/jstonely.github.io/blob/main/Website%20Images/Spiderling.gif?raw=true" 
+    alt="Spiderling" width="500" height="500" ></div>
+  <div class="third"><img class="img" style="  display: block;margin: auto;" src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/alienChokehold.jpg"
+    alt="Alien Sighting" width="500" height="500" ></div>
 
-        <div class="gallery-item">
-            <img
-                src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/AlienHeadSmoke.jpg"
-                alt="Alien Head Smoke"
-                loading="lazy"
-            >
-        </div>
+  <div class="third"><img class="img" style="  display: block;margin: auto;" src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/StoneHead.jpg" 
+    alt="Stone Head" width="500" height="500" ></div>
+  <div class="third"><img class="img" style="  display: block;margin: auto;" src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/AlienChair.jpg" 
+    alt="ET fever" width="500" height="500" ></div>
+  <div class="third"><img class="img" style="  display: block;margin: auto;" src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/Prisoner.jpg"
+    alt="The Cage" width="500" height="500" ></div>
 
-        <div class="gallery-item">
-            <img
-                src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/phone%20rota.gif"
-                alt="Phone Rotate animation"
-                loading="lazy"
-            >
-        </div>
 
-        <div class="gallery-item">
-            <img
-                src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/Gonzo.jpg"
-                alt="Gonzo artwork"
-                loading="lazy"
-            >
-        </div>
 
-        <div class="gallery-item">
-            <img
-                src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/ZomHead.jpg"
-                alt="Zombie Head artwork"
-                loading="lazy"
-            >
-        </div>
-
-        <div class="gallery-item">
-            <img
-                src="https://github.com/JStonely/jstonely.github.io/blob/main/Website%20Images/Spiderling.gif?raw=true"
-                alt="Spiderling animation"
-                loading="lazy"
-            >
-        </div>
-
-        <div class="gallery-item">
-            <img
-                src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/alienChokehold.jpg"
-                alt="Alien Chokehold artwork"
-                loading="lazy"
-            >
-        </div>
-
-        <div class="gallery-item">
-            <img
-                src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/StoneHead.jpg"
-                alt="Stone Head artwork"
-                loading="lazy"
-            >
-        </div>
-
-        <div class="gallery-item">
-            <img
-                src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/AlienChair.jpg"
-                alt="Alien Chair artwork"
-                loading="lazy"
-            >
-        </div>
-
-        <div class="gallery-item">
-            <img
-                src="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/Prisoner.jpg"
-                alt="The Cage artwork"
-                loading="lazy"
-            >
-        </div>
-
-    </main>
-
-    <script src="script.js"></script>
-
+ <script src="script.js"></script>
 </body>
 </html>
