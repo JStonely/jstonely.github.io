@@ -3,58 +3,50 @@
 <head>
   <title>JStonely</title>
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/JStonely/jstonely.github.io/refs/heads/main/Website%20Images/AlienIconGreen.png">
-  <style>
-    * {
-  box-sizing: border-box;
+  
+/* Responsive artwork gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-         body {
-              font-family: Arial, sans-serif;
-            }
-
-            .column {
-                      float: left;
-                      width: 50%;
-                      padding: 10px;
-                    }
-
-/* Clear floats after the columns */
-            .row:after {
-                      content: "";
-                      display: table;
-                      clear: both;
-                    }
-
-                    h2 {
-                        text-align: right;
-                        padding-right: 90px;
-                        }
-
-
-
-                        a:link {
-  color: rgb(255, 255, 255);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: rgb(255, 163, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: rgb(255, 236, 39);
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: rgb(255, 255, 209);
-  background-color: transparent;
-  text-decoration: underline;
+.gallery-item {
+  overflow: hidden;
+  background: #111;
 }
 
- .third { width: 33.33%; float: left; color:rgb(255, 255, 255); padding-top: 90px}
-</style>
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect */
+.gallery-item:hover img {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 12px;
+  }
+}
 
 </head>
 <body style="background-color:rgb(0, 0, 0)";>
